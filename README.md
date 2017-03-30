@@ -30,7 +30,5 @@ CommuneDatabase communeDatabase = new CommuneDatabase(App.getInstance().getConte
 ArrayList<Commune> communes = communeDatabase.getAllCommune();
 ```
 # Credit
- initiated by Addell
-
-Contributor: [Adel Elhaddad][addelll]
+ initiated by Addell - <elhaddad.addel@gmail.com>
 
