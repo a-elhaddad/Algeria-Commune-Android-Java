@@ -50,9 +50,9 @@ public class App extends Application {
     public void setCurrentAct(Activity activity) {
         this.activity = activity;
     }
-
+ }
 ```
-3 - Pour récupérer la liste des communes sous forme de liste dans l'activity /fragment :
+3 - Pour récupérer la liste des communes sous forme de liste dans l'activity, fragment ou service :
 
 ```java
 CommuneDatabase communeDatabase = new CommuneDatabase(App.getInstance().getContext());
