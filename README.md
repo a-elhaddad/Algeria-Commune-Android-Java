@@ -18,7 +18,7 @@ commune.csv
 
 1 - Mettez le fichier commune.csv dans dossier assets .
 
-2 - Mettez dans onCreate de votre class Application la ligne suivante :
+2 - Mettez dans onCreate de votre class Application :
 
 ```java
 
