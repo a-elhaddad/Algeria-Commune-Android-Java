@@ -21,7 +21,36 @@ commune.csv
 2 - Mettez dans onCreate de votre class Application la ligne suivante :
 
 ```java
-Commune.CommuneCsvToDatabase(App.getInstance().getContext());
+
+
+public class App extends Application {
+    private Context context;
+    private Activity activity;
+    private static App sInstance;
+    public static synchronized App getInstance() {
+        return sInstance;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        sInstance = this;
+        context = getApplicationContext();
+        Commune.CommuneCsvToDatabase(App.getInstance().getContext());
+    }
+
+    public Context getContext() {
+        return context;
+    }
+
+    public Activity getCurrentAct() {
+        return activity;
+    }
+
+    public void setCurrentAct(Activity activity) {
+        this.activity = activity;
+    }
+
 ```
 3 - Pour récupérer la liste des communes sous forme de liste dans l'activity /fragment :
 
